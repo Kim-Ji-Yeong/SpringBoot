@@ -17,5 +17,6 @@ public class HelloController {
     @GetMapping(value = "/variable2/{variable}")
     public String getVariable(@PathVariable("variable") String var){
         return var;
+
     }
 }
