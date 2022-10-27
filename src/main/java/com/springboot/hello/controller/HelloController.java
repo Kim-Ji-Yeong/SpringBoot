@@ -6,18 +6,24 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/get-api")
 public class HelloController {
 
-    @RequestMapping(value = "/hello", method= RequestMethod.GET)
-    public String hello(){
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello() {
         return "Hollo World";
     }
+
     @GetMapping(value = "/name")
-    public String getName(){
+    public String getName() {
         return "JiYeong";
     }
+
     @GetMapping(value = "/variable2/{variable}")
-    public String getVariable(@PathVariable("variable") String var){
+    public String getVariable(@PathVariable("variable") String var) {
         return var;
+    }
 
-
+    @GetMapping(value = "/request1")
+    public String getVariable (@RequestParam String name, @RequestParam String email, @RequestParam String organization){
+        return String.format("%s %s %s", name, email, organization);
     }
 }
+
