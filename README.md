@@ -11,6 +11,9 @@
 
 @RestController, @RequestMapping, @GetMapping, @PathVariable
 
+## 221027 
+
+GET(@RequestParam), POST(@RequestBody), Put(@ResponseEntity), Swagger
 
 </div>
 </details>
