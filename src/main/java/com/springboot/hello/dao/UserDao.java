@@ -1,6 +1,6 @@
 package com.springboot.hello.dao;
 
-import org.apache.catalina.User;
+import com.springboot.hello.domain.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -14,6 +14,7 @@ import java.util.List;
 
 @Component
 public class UserDao {
+
     private final DataSource dataSource;
     private final JdbcTemplate jdbcTemplate;
 

@@ -2,12 +2,8 @@ package com.springboot.hello.controller;
 
 import com.springboot.hello.dao.UserDao;
 import com.springboot.hello.domain.User;
-import com.springboot.hello.domain.dto.UserRequestDto;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
 
 @RestController
 @RequestMapping("/api/v1")
