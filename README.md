@@ -15,5 +15,10 @@
 
 GET(@RequestParam), POST(@RequestBody), Put(@ResponseEntity), Swagger
 
+## 221028 
+
+GetController : 로그 남기는 방법(@Slf4j, log.info)
+SpringBootCoreGuide . UserController, UserDao, User : SpringBoot와 jdbcTemplate을 이용해 CRUD 구현
+
 </div>
 </details>
