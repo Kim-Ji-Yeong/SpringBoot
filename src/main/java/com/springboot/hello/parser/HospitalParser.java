@@ -9,7 +9,7 @@ public class HospitalParser implements Parser<Hospital> {
     @Override
     public Hospital parse(String str) {
 
-        String[] row =str.split("\",\"");
+        String[] row =str.split(",");
         Hospital hospital = new Hospital();
         hospital.setId(Integer.parseInt(row[0].replace("\"","")));
         hospital.setOpenServiceName(row[1]);
