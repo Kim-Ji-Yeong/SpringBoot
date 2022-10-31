@@ -10,5 +10,6 @@ public class ParserFactory {
     @Bean
     public ReadLineContext<Hospital> hospitalReadLineContext(){
         return new ReadLineContext<Hospital>(new HospitalParser());
+
     }
 }
