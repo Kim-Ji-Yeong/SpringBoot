@@ -3,6 +3,16 @@
 ### 멋쟁이 사자처럼 백엔드 스쿨 2기
 - 교육기간 : 22.09.19 ~ 2.17
 
+
+
+<details>
+<summary>week7</summary>
+<div markdown="1">
+
+## 221031
+Hospital 데이터 파싱
+</div>
+</details>
 <details>
 <summary>week6</summary>
 <div markdown="1">
