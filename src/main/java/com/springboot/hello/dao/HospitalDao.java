@@ -2,7 +2,11 @@ package com.springboot.hello.dao;
 
 import com.springboot.hello.domain.dto.Hospital;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 //DB에 insert하기
 @Component
@@ -12,6 +16,24 @@ public class HospitalDao {
     public HospitalDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
+    RowMapper<Hospital> rowMapper = (rs,rowNum) ->{
+        Hospital hospital = new Hospital();
+        hospital.setId(rs.getInt("id"));
+        hospital.setOpenServiceName(rs.getString("open_service_name"));
+        hospital.setHospitalName(rs.getString("hospital_name"));
+        hospital.setLicenseDate(rs.getTimestamp("license_date").toLocalDateTime());
+        hospital.setTotalAreaSize(rs.getFloat("total_area_size"));
+        return hospital;
+    };
+
+    public Hospital findById(int id){
+        return this.jdbcTemplate.queryForObject("select * from nation_wide_hospitals where id= ?",rowMapper ,id);
+    }
+
+   public void deleteAll(){
+        this.jdbcTemplate.update("delete from nation_wide_hospitals");
+   }
 
     public int getCount(){
         String sql = "select count(id) from nation_wide_hospitals;";
