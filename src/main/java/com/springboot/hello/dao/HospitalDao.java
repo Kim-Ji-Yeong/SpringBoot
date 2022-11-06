@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 //DB에 insert하기
+
 @Component
 public class HospitalDao {
     private final JdbcTemplate jdbcTemplate;
